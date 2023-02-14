@@ -1,7 +1,7 @@
 import React from 'react'
 import { useBgDarknessVerify } from '../hooks/useBgDarknessVerify'
 
-function Color({ color }) {
+function Color ({ color }) {
   const TagColorText = useBgDarknessVerify(color)
   const colorStyle = {
     background: '#' + color,
