@@ -56,3 +56,29 @@ h1 {
   background: black;
   color: #fff;
 }
+
+.copyButton {
+  border: none;
+  outline: none;
+  display: none;
+  padding: 15px;
+  background: white;
+  color: black;
+  border-radius: 25px;
+  font-weight: 700;
+  opacity: 0;
+  transition-property: background, color, opacity;
+  transition-duration: .3s;
+}
+
+.copyButton:hover {
+  background: black;
+  color: white;
+}
+
+.color:hover > .copyButton {
+  display: flex;
+  position: absolute;
+  bottom: 40%;
+  opacity: 1;
+}
