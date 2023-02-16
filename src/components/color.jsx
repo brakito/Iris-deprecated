@@ -1,8 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useBgDarknessVerify } from '../hooks/useBgDarknessVerify'
+import Icon from './icons'
+import ColorActionsBar from './toolBar'
+import { hexToHSL } from '../services/changeColorMode'
 
-function Color ({ color }) {
+function Color({ color }) {
   const TagColorText = useBgDarknessVerify(color)
+  const HSL = hexToHSL(color)
   const colorStyle = {
     background: '#' + color,
     color: '#' + TagColorText
@@ -13,24 +17,21 @@ function Color ({ color }) {
     margin: 0
   }
 
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(color)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 1000);
-    } catch (err) {
-      console.error("Failed to copy text: ", err)
-    }
+  const decoration = {
+    color: '#' + TagColorText,
+    opacity: '50%'
   }
+
+  const decoracion = TagColorText == '000000' ? 'hashBlack' : 'hashWhite'
 
   return (
     <div className='color' style={colorStyle}>
-      <h2 style={tag}>{color}</h2>
-      <button className='copyButton' onClick={handleCopy}>
-        {copied ? "copied!" : "click to copy"}
-      </button>
+      <Icon name='hash' classes='hashIcon' style={decoration} />
+      <ColorActionsBar color={color} />
+      <div className='tagContainer'>
+        <h2 style={tag}>{color}</h2>
+        <p style={tag}>{`${Math.round(HSL.h)}, ${Math.round(HSL.s)}, ${Math.round(HSL.l)}`}</p>
+      </div>
     </div>
   )
 }

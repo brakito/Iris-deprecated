@@ -21,18 +21,26 @@ h1 {
 .palette {
   display: flex;
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 150px);
 }
 
 .color {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
   padding: 30px;
+  padding-bottom: 120px;
   margin: 0;
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .generateBtn {
@@ -57,28 +65,63 @@ h1 {
   color: #fff;
 }
 
-.copyButton {
+.actionButton {
   border: none;
   outline: none;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 15px;
-  background: white;
-  color: black;
-  border-radius: 25px;
+  width: 55px;
+  height: 55px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  border-radius: 12.5px;
   font-weight: 700;
-  opacity: 0;
-  transition-property: background, color, opacity;
+  transition-property: background;
   transition-duration: .3s;
 }
 
-.copyButton:hover {
-  background: black;
-  color: white;
+.actionButton:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.color:hover > .copyButton {
-  display: flex;
-  position: absolute;
-  bottom: 40%;
+.color:hover > .colorActionBar {
   opacity: 1;
+}
+
+.actionIcon {
+  height: 30px;
+  fill: currentcolor;
+}
+
+.colorActionBar {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 55px);
+  grid-template-rows: repeat(3, 55px);
+  gap: 15px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+
+.copyButton {
+  grid-column-end: span 2;
+  width: 100%;
+}
+
+.hashIcon {
+  width: 91px;
+  opacity: 0.5;
+}
+
+.hashBlack {
+  color: black;
+}
+
+.hashWhite {
+  color: white;
 }

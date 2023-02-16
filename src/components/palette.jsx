@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Color from './color'
 
 function Palette ({ palette }) {
+  const [paletteToUse, setPalete] = useState([])
+
+  useEffect(function(){
+    setPalete(palette)
+  }, [palette])
+
   return (
     <div className='palette'>
-      {palette.map((color) => {
+      {paletteToUse.map((color) => {
         return <Color key={color} color={color} />
       })}
     </div>

@@ -1,4 +1,4 @@
-export function hexToRGB (hex) {
+export function hexToRGB(hex) {
   const RGB = {
     r: parseInt(hex.substring(0, 2), 16),
     g: parseInt(hex.substring(2, 4), 16),
@@ -7,7 +7,7 @@ export function hexToRGB (hex) {
   return RGB
 }
 
-export function hexToHSL (hex) {
+export function hexToHSL(hex) {
   let { r, g, b } = hexToRGB(hex)
   r = r / 255
   g = g / 255
@@ -21,12 +21,19 @@ export function hexToHSL (hex) {
   let s = 0
   const l = (cMax + cMin) / 2
 
-  if (delta !== 0) {
-    if (cMax === r) h = 60 * (((g - b) / delta) % 6)
-    else if (cMax === g) h = 60 * (((b - r) / delta) + 2)
-    else h = 60 * (((r - g) / delta) + 4)
+  if (delta === 0) {
+    h = 0
+  } else if (cMax === r) {
+      h = 60 * ((g - b) / delta)
+    } else if (cMax === g) {
+      h = 60 * ((b - r) / delta) + 120
+    } else {
+      h = 60 * ((r - g) / delta) + 240
+    }
+    if (h < 0) h += 360
 
     s = delta / (1 - Math.abs(2 * l - 1))
-  }
+
   return { h, s: s * 100, l: l * 100 }
 }
+
