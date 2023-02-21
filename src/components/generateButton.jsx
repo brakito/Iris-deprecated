@@ -1,20 +1,15 @@
-import React, { useContext } from 'react'
-import paletteContext from '../context/paletteContext'
-import { generataPalette } from '../services/GenerateRandomHexColor'
-import { useLocation } from 'wouter'
+import React from 'react'
+import { usePalette } from '../hooks/usePalette'
 
-function GenerateButton() {
-  const { setPalette } = useContext(paletteContext)
-  const [location, pushLocation] = useLocation()
+function GenerateButton () {
+  const { getNewPalette } = usePalette()
 
   const handleClick = () => {
-    const newPalette = generataPalette()
-    setPalette(newPalette)
-    pushLocation(`/palette/${newPalette.join('-')}`, { replace: true })
+    getNewPalette(true)
   }
 
   return (
-    <button className='generateBtn' onClick={handleClick}>
+    <button className='generateBtn' onClick={handleClick} id='generateButton'>
       New Palette
     </button>
   )

@@ -41,6 +41,20 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 15px;
+  border-radius: 25px;
+  transition-property: background;
+  transition-duration: .3s;
+}
+
+.tagContainer:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.tagContainer p {
+  font-weight: bold;
+  margin: 0;
+  opacity: .6;
 }
 
 .generateBtn {
@@ -115,13 +129,5 @@ h1 {
 
 .hashIcon {
   width: 91px;
-  opacity: 0.5;
-}
-
-.hashBlack {
-  color: black;
-}
-
-.hashWhite {
-  color: white;
+  opacity: 0.2;
 }

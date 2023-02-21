@@ -1,28 +1,30 @@
-import React, {useState} from "react";
-import Icon from "../icons";
+import React, { useState } from 'react'
+import Icon from '../icons'
 
 function MoreButton () {
-
   const [locked, setLocked] = useState(false)
 
   const handleLock = () => {
     try {
       setLocked(true)
-      setTimeout(() => setLocked(false), 1000);
+      setTimeout(() => setLocked(false), 1000)
     } catch (err) {
-      console.error("Failed to copy text: ", err)
+      console.error('Failed to copy text: ', err)
     }
   }
 
-  return <button
-  className="actionButton moreButton"
-  onClick={handleLock}>
-  {
+  return (
+    <button
+      className='actionButton moreButton'
+      onClick={handleLock}
+    >
+      {
     locked
       ? <Icon name='done' classes='actionIcon moreIcon' />
       : <Icon name='more' classes='actionIcon moreIcon' />
   }
-</button>
+    </button>
+  )
 }
 
 export default MoreButton

@@ -1,17 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { usePalette } from '../hooks/usePalette'
 import Color from './color'
 
-function Palette ({ palette }) {
-  const [paletteToUse, setPalete] = useState([])
-
-  useEffect(function(){
-    setPalete(palette)
-  }, [palette])
+function Palette () {
+  const { palette } = usePalette()
 
   return (
     <div className='palette'>
-      {paletteToUse.map((color) => {
-        return <Color key={color} color={color} />
+      {palette.map((color, index) => {
+        return <Color key={`${color}-${index}`} color={color} />
       })}
     </div>
   )

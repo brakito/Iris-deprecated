@@ -10,11 +10,11 @@ function App () {
     <PaletteContextProvider>
       <div className='App'>
         <Route path='/'>
-          <h1 style={{textAlign: 'center', color:'white'}}>Create your awesome color palette!</h1>
+          <h1 style={{ textAlign: 'center', color: 'white' }}>Create your awesome color palette!</h1>
         </Route>
         <Route
           component={RandomPalette}
-          path='/palette/:palette'
+          path='/:urlPalette'
         />
         <GenerateButton />
       </div>
