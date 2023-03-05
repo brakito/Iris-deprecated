@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import Palette from '../components/palette'
-import { usePalette } from '../hooks/usePalette'
+import Palette from '../../components/palette/index'
+import { usePalette } from '../../hooks/usePalette'
 
 function RandomPalette(props) {
   const { urlPalette } = props.params

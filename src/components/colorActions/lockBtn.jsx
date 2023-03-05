@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Icon from '../icons'
+import Icon from '../icons/index'
 
 function LockButton({ theme }) {
   const [locked, setLocked] = useState(false)

@@ -1,6 +1,7 @@
 import React from 'react'
-import { usePalette } from '../hooks/usePalette'
-import Icon from './icons'
+import './main.css'
+import { usePalette } from '../../hooks/usePalette'
+import Icon from '../icons'
 
 function SetConfigsButton() {
   const { config, setConfig } = usePalette()

@@ -1,9 +1,10 @@
 import React from 'react'
-import CopyButton from './colorActions/copyBtn'
-import LockButton from './colorActions/lockBtn'
-import PickButton from './colorActions/pickBtn'
-import MoreButton from './colorActions/moreBtn'
-import ReloadButton from './colorActions/Reloadbtn'
+import './main.css'
+import CopyButton from '../colorActions/copyBtn'
+import LockButton from '../colorActions/lockBtn'
+import PickButton from '../colorActions/pickBtn'
+import MoreButton from '../colorActions/moreBtn'
+import ReloadButton from '../colorActions/Reloadbtn'
 
 function ColorActionsBar ({ color, theme }) {
   return (

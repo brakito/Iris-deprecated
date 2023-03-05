@@ -1,6 +1,7 @@
 import React from 'react'
-import { usePalette } from '../hooks/usePalette'
-import { generataPalette } from '../services/GenerateRandomHexColor'
+import './main.css'
+import { usePalette } from '../../hooks/usePalette'
+import { generataPalette } from '../../services/GenerateRandomHexColor'
 
 function GenerateButton() {
   const { setPalette, config } = usePalette()

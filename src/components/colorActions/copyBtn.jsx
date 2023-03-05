@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import Icon from '../icons'
+import './main.css'
+import Icon from '../icons/index'
 
 function CopyButton ({ textToCopy, theme }) {
   const [copied, setCopied] = useState(false)

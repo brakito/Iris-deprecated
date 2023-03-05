@@ -1,9 +1,8 @@
 import './App.css'
 import { PaletteContextProvider } from './context/paletteContext'
 import { Route } from 'wouter'
-import RandomPalette from './pages/randomPalette'
-import GenerateButton from './components/generateButton'
-import SetConfigsButton from './components/setConfigsButton'
+import RandomPalette from './pages/createPalette.jsx/index'
+import PaletteActions from './components/paletteActionsContainer/index'
 /* "./node_modules/standard/eslintrc.json" */
 
 function App () {
@@ -18,8 +17,7 @@ function App () {
           path='/:urlPalette'
         />
         <div className='buttonsContainer'>
-        <GenerateButton />
-        <SetConfigsButton />
+        <PaletteActions />
         </div>
       </div>
     </PaletteContextProvider>

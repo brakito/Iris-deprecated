@@ -1,0 +1,19 @@
+.colorActionBar {
+  padding: 15px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 55px);
+  grid-template-rows: repeat(3, 55px);
+  gap: 15px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: .3s;
+}
+
+.isDark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.isLigth {
+  background: rgba(255, 255, 255, 0.2);
+}

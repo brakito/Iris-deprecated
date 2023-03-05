@@ -1,5 +1,6 @@
 import React from 'react'
-import Color from './color'
+import './main.css'
+import Color from '../color/index'
 
 function Palette({ palette }) {
 

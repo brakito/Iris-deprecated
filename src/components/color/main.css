@@ -1,0 +1,50 @@
+.color {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  padding-bottom: 120px;
+  margin: 0;
+}
+
+.tagContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 25px;
+  transition-property: background;
+  transition-duration: .3s;
+}
+
+.tagContainer p {
+  font-weight: bold;
+  margin: 0;
+  opacity: .6;
+}
+
+.span {
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.tag {
+  opacity: 0.9;
+  margin: 0;
+}
+
+.isDark {
+  color: #000;
+}
+
+.isLigth {
+  color: #fff;
+}
+
+.color:hover > .colorActionBar {
+  opacity: 1;
+}

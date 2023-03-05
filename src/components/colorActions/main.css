@@ -1,0 +1,36 @@
+.isDark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.isLigth {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.actionButton {
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  width: 55px;
+  height: 55px;
+  color: white;
+  border-radius: 12.5px;
+  font-weight: 700;
+  transition-property: background;
+  transition-duration: .3s;
+}
+
+.copyButton {
+  grid-column-end: span 2;
+  width: 100%;
+}
+
+.actionButton.isDark:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.actionButton.isLigth:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
