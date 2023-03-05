@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Icon from '../icons'
 
-function CopyButton ({ textToCopy }) {
+function CopyButton ({ textToCopy, theme }) {
   const [copied, setCopied] = useState(false)
 
   const handleCopy = async () => {
@@ -16,7 +16,7 @@ function CopyButton ({ textToCopy }) {
 
   return (
     <button
-      className='actionButton copyButton'
+      className={'actionButton copyButton ' + theme}
       onClick={handleCopy}
     >
       {

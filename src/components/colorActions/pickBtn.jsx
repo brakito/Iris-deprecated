@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Icon from '../icons'
 
-function LoveButton () {
+function PickButton({ theme }) {
   const [locked, setLocked] = useState(false)
 
   const handleLock = () => {
@@ -15,16 +15,16 @@ function LoveButton () {
 
   return (
     <button
-      className='actionButton loveButton'
+      className={'actionButton PickButton ' + theme}
       onClick={handleLock}
     >
       {
-    locked
-      ? <Icon name='done' classes='actionIcon loveIcon' />
-      : <Icon name='love' classes='actionIcon loveIcon' />
-  }
+        locked
+          ? <Icon name='done' classes='actionIcon pickIcon' />
+          : <Icon name='pick' classes='actionIcon pickIcon' />
+      }
     </button>
   )
 }
 
-export default LoveButton
+export default PickButton

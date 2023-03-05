@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Icon from '../icons'
 
-function ReloadButton () {
+function ReloadButton({ theme }) {
   const [locked, setLocked] = useState(false)
 
   const handleLock = () => {
@@ -15,14 +15,14 @@ function ReloadButton () {
 
   return (
     <button
-      className='actionButton reloadButton'
+      className={'actionButton reloadButton ' + theme}
       onClick={handleLock}
     >
       {
-    locked
-      ? <Icon name='done' classes='actionIcon reloadIcon' />
-      : <Icon name='reload' classes='actionIcon reloadIcon' />
-  }
+        locked
+          ? <Icon name='done' classes='actionIcon reloadIcon' />
+          : <Icon name='reload' classes='actionIcon reloadIcon' />
+      }
     </button>
   )
 }

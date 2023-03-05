@@ -3,6 +3,7 @@ import { PaletteContextProvider } from './context/paletteContext'
 import { Route } from 'wouter'
 import RandomPalette from './pages/randomPalette'
 import GenerateButton from './components/generateButton'
+import SetConfigsButton from './components/setConfigsButton'
 /* "./node_modules/standard/eslintrc.json" */
 
 function App () {
@@ -16,7 +17,10 @@ function App () {
           component={RandomPalette}
           path='/:urlPalette'
         />
+        <div className='buttonsContainer'>
         <GenerateButton />
+        <SetConfigsButton />
+        </div>
       </div>
     </PaletteContextProvider>
   )

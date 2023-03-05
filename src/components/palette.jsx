@@ -1,9 +1,7 @@
 import React from 'react'
-import { usePalette } from '../hooks/usePalette'
 import Color from './color'
 
-function Palette () {
-  const { palette } = usePalette()
+function Palette({ palette }) {
 
   return (
     <div className='palette'>

@@ -7,9 +7,9 @@ export function generateHex () {
   return randomHex
 }
 
-export function generataPalette (numberColors = 5) {
+export function generataPalette ({paletteLength}) {
   const palette = []
-  for (let i = 0; i < numberColors; i++) {
+  for (let i = 0; i < paletteLength; i++) {
     palette.push(generateHex())
   }
   return palette

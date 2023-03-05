@@ -47,23 +47,23 @@ h1 {
   transition-duration: .3s;
 }
 
-.tagContainer:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .tagContainer p {
   font-weight: bold;
   margin: 0;
   opacity: .6;
 }
 
-.generateBtn {
+.buttonsContainer {
   position: absolute;
   bottom: 30px;
   left: 30px;
   right: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.button {
   border: none;
-  outline: none;
   background: #fff;
   font-size: 24px;
   padding: 15px 30px;
@@ -72,10 +72,41 @@ h1 {
   cursor: pointer;
   transition-property: background, color;
   transition-duration: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
-.generateBtn:hover {
+.button:hover {
   background: black;
+  color: #fff;
+}
+
+.generateBtn {
+  flex-grow: 1;
+  padding: 6px 7px;
+  border-radius: 25px;
+  border: none;
+  background-image: linear-gradient(135deg, #FF0000 -5.78%, #FFEA00 14.72%, #81FF6C 35.45%, #00E0FF 53.3%, #000FFF 67.12%, #FF00F5 82.66%, #FF0000 104.75%, rgba(255, 0, 0, 0.00729179) 104.76%);
+  cursor: pointer;
+}
+.generateBtn span{
+  font-size: 24px;
+  font-weight: 700;
+  background: #fff;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 19px;
+  padding: 11px 25px;
+  transition-property: background color;
+  transition-duration: .3s;
+}
+
+.generateBtn:hover span {
+  background: #000;
   color: #fff;
 }
 
@@ -88,7 +119,6 @@ h1 {
   padding: 15px;
   width: 55px;
   height: 55px;
-  background: rgba(0, 0, 0, 0.2);
   color: white;
   border-radius: 12.5px;
   font-weight: 700;
@@ -96,8 +126,12 @@ h1 {
   transition-duration: .3s;
 }
 
-.actionButton:hover {
+.actionButton.isDark:hover {
   background: rgba(0, 0, 0, 0.5);
+}
+
+.actionButton.isLigth:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .color:hover > .colorActionBar {
@@ -105,12 +139,11 @@ h1 {
 }
 
 .actionIcon {
-  height: 30px;
-  fill: currentcolor;
+  height: 25px;
+  fill: #fff;
 }
 
 .colorActionBar {
-  background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
   border-radius: 25px;
   display: grid;
@@ -122,6 +155,14 @@ h1 {
   transition-duration: .3s;
 }
 
+.isDark {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.isLigth {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .copyButton {
   grid-column-end: span 2;
   width: 100%;
@@ -130,4 +171,11 @@ h1 {
 .hashIcon {
   width: 91px;
   opacity: 0.2;
+}
+
+.configIcon {
+  height: 25px;
+  margin: 0;
+  padding: 0;
+  fill: currentColor;
 }

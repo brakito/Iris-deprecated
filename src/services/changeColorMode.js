@@ -55,9 +55,9 @@ export function hexToCMYK (hex) {
   const y = (1 - b - k) / (1 - k)
 
   return {
-    c: Math.round(c * 100),
-    m: Math.round(m * 100),
-    y: Math.round(y * 100),
+    c: Math.round(c * 100) | 0,
+    m: Math.round(m * 100) | 0,
+    y: Math.round(y * 100) | 0,
     k: Math.round(k * 100)
   }
 }

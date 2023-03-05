@@ -1,18 +1,18 @@
 import React from 'react'
 import CopyButton from './colorActions/copyBtn'
 import LockButton from './colorActions/lockBtn'
-import LoveButton from './colorActions/loveBtn'
+import PickButton from './colorActions/pickBtn'
 import MoreButton from './colorActions/moreBtn'
 import ReloadButton from './colorActions/Reloadbtn'
 
-function ColorActionsBar ({ color }) {
+function ColorActionsBar ({ color, theme }) {
   return (
-    <div className='colorActionBar'>
-      <LoveButton />
-      <LockButton />
-      <MoreButton />
-      <ReloadButton />
-      <CopyButton textToCopy={color} />
+    <div className={theme + ' colorActionBar'}>
+      <ReloadButton theme={theme} />
+      <LockButton theme={theme} />
+      <PickButton theme={theme}/>
+      <MoreButton theme={theme} />
+      <CopyButton textToCopy={color} theme={theme} />
     </div>
   )
 }
