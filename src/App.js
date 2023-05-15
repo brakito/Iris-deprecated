@@ -1,24 +1,30 @@
 import './App.css'
 import { PaletteContextProvider } from './context/paletteContext'
-import { Route } from 'wouter'
-import RandomPalette from './pages/createPalette.jsx/index'
-import PaletteActions from './components/paletteActionsContainer/index'
+import { Redirect, Route } from 'wouter'
+import CreatePalette from './pages/createPalette/index'
+import StartPage from './pages/startPage'
+import SideMenu from './components/sideMenu/menu'
 /* "./node_modules/standard/eslintrc.json" */
 
-function App () {
+function App() {
   return (
     <PaletteContextProvider>
       <div className='App'>
-        <Route path='/'>
-          <h1 style={{ textAlign: 'center', color: 'white' }}>Create your awesome color palette!</h1>
-        </Route>
+      <SideMenu />
         <Route
-          component={RandomPalette}
-          path='/:urlPalette'
+          component={StartPage}
+          path='/palette'
         />
-        <div className='buttonsContainer'>
-        <PaletteActions />
-        </div>
+        <Route
+          component={CreatePalette}
+          path='/palette/:urlPalette'
+        />
+        <Route path='/create-palette'>
+          <Redirect to='/palette' />
+        </Route>
+        <Route path='/'>
+          <Redirect to='/palette' />
+        </Route>
       </div>
     </PaletteContextProvider>
   )

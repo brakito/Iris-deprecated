@@ -5,7 +5,7 @@ const Context = React.createContext({})
 export function PaletteContextProvider ({ children }) {
   const [palette, setPalette] = useState([])
   const [config, setConfig] = useState({
-    paletteLength: 2,
+    paletteLength: 5,
     generationMode: null
   })
 

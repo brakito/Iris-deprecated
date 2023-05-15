@@ -1,0 +1,91 @@
+.sideMenu {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px);
+  background-color: #fff;
+  margin: 0;
+  padding: 30px;
+  gap: 30px;
+  width: fit-content;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggleMenu {
+  rotate: 180deg;
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  color: #000;
+  fill: currentColor;
+  border-radius: 16px;
+  margin: 0;
+  gap: 20px;
+  text-decoration: none;
+  transition-property: background;
+  transition-duration: .3s;
+}
+
+.menuItem:hover {
+  background: #0001;
+}
+
+.menuItem span {
+  opacity: 0.7;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.menuItem h2 {
+  font-size: 20px;
+}
+
+h2, span {
+  margin: 0;
+  padding: 0;
+}
+
+.sideMenuIcon {
+  height: 30px;
+}
+
+.tools, .appUtils {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tools {
+  flex-grow: 1;
+}
+
+.toggleMenuBtn {
+  padding: 10px;
+  border: none;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.toggleMenuBtn:hover {
+  background: #0002;
+}
+
+.logo {
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

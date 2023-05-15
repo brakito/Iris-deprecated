@@ -9,10 +9,10 @@ export function usePalette() {
 
   useEffect(() => {
     const newConfig = config
-    newConfig.paletteLength = palette.length > 0 ? palette.length : 2 
+    newConfig.paletteLength = palette.length > 0 ? palette.length : 5 
     setConfig(newConfig)
 
-    pushLocation(`/${palette.join('-')}`, { replace: true })
+    pushLocation(`/palette/${palette.join('-')}`, { replace: true })
 
   }, [pushLocation, palette, setConfig, config])
 

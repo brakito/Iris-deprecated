@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Rubik:wght@700;900&display=swap');
+
 .App {
   background-color: #282c34;
   min-height: 100vh;
+  display: flex;
 }
 
 h1 {
@@ -16,4 +19,12 @@ h1 {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+:root {
+  --mainGradient: linear-gradient(90deg, rgba(247,210,118,1) 0%, rgba(244,86,220,1) 30%, rgba(131,111,238,1) 70%, rgba(58,242,195,1) 100%);
+  --firstGradient: linear-gradient(90deg, rgba(131,111,238,1) 0%, rgba(244,86,220,1) 100%);
+  --secondGradient: linear-gradient(90deg, rgba(97,244,206,1) 0%, rgba(131,111,238,1) 100%);
+  --thirdGradient: linear-gradient(90deg, rgba(131,111,238,1) 0%, rgba(244,86,220,1) 100%);
+  --fourthGradient: linear-gradient(90deg, rgba(97,244,206,1) 0%, rgba(131,111,238,1) 100%);
 }
